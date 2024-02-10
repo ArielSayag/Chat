@@ -10,9 +10,7 @@ import { Link } from "react-router-dom";
 export function AuthPage() {
 
   const user = useSelector<RootState, User | null>(state => state.userReducer.user)
-  if(user) {
-    return <Navigate to="/home"/>
-  }
+
   
   const location = useLocation()
 
@@ -26,6 +24,10 @@ export function AuthPage() {
     Don't have an account? <Link to="/auth/sign-up">sign up now</Link>
   </div>
   }, [location])
+
+  if(user) {
+    return <Navigate to="/home"/>
+  }
   
   return <div className="mx-auto max-w-[700px] p-4">
       <Outlet/>

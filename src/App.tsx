@@ -32,7 +32,7 @@ function App() {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
       if(!authUser) {
         if(location.pathname !== '/') {
-          message.info("Signed out")
+          // message.info("Signed out")
           nav("/")
         }
         return

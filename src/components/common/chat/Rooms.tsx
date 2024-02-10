@@ -50,11 +50,11 @@ export default function Rooms({onRoom}: {onRoom:(room: string) => void}) {
       {/* <SlideHeader userPhoto={userImg}  user={user}/> */}
       <div className='bg-blue-100 h-[63px] mr-2 w-full z-10 box-border text-[#000000de]  flex flex-row items-stretch border-b border-solid border-gray-300  select-none'>
       <div className='box-border ml-[11px] mt-[12px] w-[60px] h-[60px] mr-4 order-2  '>
-        <img className='rounded-full  border-[1px] border-[white]' alt="user-photo" src={user?.userInfo.photoURL || ""} />
+        <img className='rounded-full  border-[1px] border-[white]' alt="user-photo" src={user?.userInfo?.photoURL || ""} />
       </div>
       <div className=' box-border w-full flex items-center order-3 flex-grow-2 justify-center  min-w-0'>
         <div className='pl-[10px] w-[70%] text-left box-border baseline  overflow-hidden whitespace-nowrap font-bold  text-blue-800'>
-          {user?.userInfo.nickname}
+          {user?.userInfo?.nickname}
         </div>
       <button onClick={handleLogOut} className="opacity-60 hover:opacity-100 cursor-pointer p-0  outline-none box-border inline-block align-middle text-center text-blue-500 bg-transparent border-none rounded-[0.7em] m-0.1em 0.2em p-0.2em 0.7em text-[2em] leading-1.5">
         <AiOutlineLogout />
